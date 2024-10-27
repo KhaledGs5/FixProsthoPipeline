@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/KhaledGs5/Fixprostho.git'
+                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/KhaledGs5/FixProsthoPipeline.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -16,7 +16,7 @@ pipeline {
                 sh """
                 ${SCANNER_HOME}/bin/sonar-scanner \
                 -Dsonar.host.url=http://localhost:9000 \
-                -Dsonar.login=squ_05dc2fcafbc8abc4870094ea690acd6962787829 \
+                -Dsonar.login=squ_e0bbb8a856b698462ef0e5e240d8bc586056c9ad \
                 -Dsonar.projectName=FixProstho \
                 -Dsonar.java.binaries=. \
                 -Dsonar.projectKey=FixProstho \
