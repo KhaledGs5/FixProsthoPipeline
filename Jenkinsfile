@@ -16,7 +16,7 @@ pipeline {
                 sh """
                 ${SCANNER_HOME}/bin/sonar-scanner \
                 -Dsonar.host.url=http://localhost:9000 \
-                -Dsonar.login=squ_e0bbb8a856b698462ef0e5e240d8bc586056c9ad \
+                -Dsonar.login=squ_d66f2cf5974623f1f25acc4cdb19159a38a592e7 \
                 -Dsonar.projectName=FixProstho \
                 -Dsonar.java.binaries=. \
                 -Dsonar.projectKey=FixProstho \
