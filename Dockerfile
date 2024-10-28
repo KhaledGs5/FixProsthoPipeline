@@ -1,15 +1,15 @@
 FROM ubuntu:24.04
 
 # Prerequisites
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y \
     curl \
     git \
     unzip \
-    xz-utils \
-    zip \
-    libglu1-mesa \
-    wget
+    wget \
+    zip
 
+
+    
 # Set up new user
 RUN useradd -ms /bin/bash developer
 USER developer
