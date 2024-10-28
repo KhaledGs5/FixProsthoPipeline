@@ -34,8 +34,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker build -t khaledgs/FixProstho ."
-                        sh "docker push khaledgs/FixProstho"
+                        sh "docker build -t khaledgs/fixprostho ."
+                        sh "docker push khaledgs/fixprostho"
                     }
                 }
             }
